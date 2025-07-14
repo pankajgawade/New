@@ -1,61 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Forever Bond 💖</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Love, My Nikku 💖💍</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <canvas id="heartCanvas"></canvas>
+    <canvas id="heartCanvas"></canvas>
 
-  <div class="container">
-    <h1>Our Beautiful Journey Together❤️</h1>
-    <h2 id="typewriter"></h2>
+    <div class="container">
+        <h1>Our Beautiful Long-Distance Journey Together<span>❤️</span></h1>
+        <h2 id="typewriter"></h2>
 
-    <!-- Memories Section -->
-    <section class="photo-gallery">
-      <h3>Myyyy Cutieee 💕</h3>
-      <div class="photos">
-        <img src="/1.jpg" alt="Us Together 1" />
-        <img src="/2.jpg" alt="Us Together 2" />
-        <img src="/3.jpg" alt="Us Together 3" />
-      </div>
-    </section>
+        <section class="ldr-status card">
+            <h3>Distance Makes the Heart Grow Fonder ⏳💖</h3>
+            <div class="status-grid">
+                <div class="status-item">
+                    <p class="status-label">Days Apart:</p>
+                    <p class="status-value" id="daysApart">0</p>
+                </div>
+                <div class="status-item">
+                    <p class="status-label">Dreaming of:</p>
+                    <p class="status-value">Our First Hug! 🥰</p>
+                </div>
+            </div>
+            <p class="future-note">Counting down the moments until we meet... Every day brings us closer!</p>
+        </section>
 
-    <!-- Playlist Section -->
-    <div class="playlist">
-      <h3>🎧 Our Love Playlist 💝</h3>
-      <ul>
-        <li><span>Cahun Mei Ya Na 💖✨</span><audio controls src="/Cahunmei.mp3"></audio></li>
-        <li><span>Kaun Tujhe 🌧️💙</span><audio controls src="/kaun tuze.mp3"></audio></li>
-        <li><span>Jane Na Tu 🥺🌹</span><audio controls src="/Jane na kru.mp3"></audio></li>
-        <li><span>Sur Hi Tu 🎶💫</span><audio controls src="/sur hi tu.mp3"></audio></li>
-        <li><span>Dagabaz Re 🎵🔥</span><audio controls src="/dagabaz.mp3"></audio></li>
-        <li><span>Tola Tola 💜🎶</span><audio controls src="/tola tola.mp3"></audio></li>
-      </ul>
+        <section class="photo-gallery card">
+            <h3>Myyy Cutiee Radha <span>💕</span></h3>
+            <div class="gallery-category" data-category="her_photos">
+                <div class="photos">
+                    <img src="/1.jpg" alt="Her Photo 1" loading="lazy" data-caption="A beautiful smile that brightens my day.">
+                    <img src="/2.jpg" alt="Her Photo 2" loading="lazy" data-caption="Absolutely stunning, as always.">
+                    <img src="/3.jpg" alt="Her Photo 3" loading="lazy" data-caption="My favorite person in the world.">
+                    <img src="/4.jpg" alt="Her Photo 4" loading="lazy" data-caption="Every picture tells a story of love.">
+                    <img src="/5.jpg" alt="Her Photo 5" loading="lazy" data-caption="Your eyes hold a universe of dreams.">
+                    <img src="/6.jpg" alt="Her Photo 6" loading="lazy" data-caption="Cherishing every moment, near or far.">
+                    <img src="/7.jpg" alt="Her Photo 7" loading="lazy" data-caption="My heart skips a beat for you.">
+                </div>
+            </div>
+        </section>
+
+        <section class="photo-gallery card">
+            <h3>Our Screenshot Collection 📸💬</h3>
+            <p class="gallery-intro">The best lovable & funniest vc moments .</p>
+            <div class="gallery-category" data-category="screenshots">
+                <div class="photos">
+                    <img src="/Sleepingbaby.jpg" alt="Sweet Chat Screenshot 1" loading="lazy" data-caption="Our first 'good morning' message.">
+                    <img src="/OurVc.jpg" alt="Funny Meme Screenshot 2" loading="lazy" data-caption="That meme that made us laugh for days.">
+                    <img src="/facepack1.jpg" alt="Deep Talk Screenshot 3" loading="lazy" data-caption="One of our meaningful conversations.">
+                    <img src="/study1.jpg" alt="Video Call Screenshot 4" loading="lazy" data-caption="Remember our first video call? ❤️">
+                    <img src="/facepack2.jpg" alt="Voice Note Screenshot 5" loading="lazy" data-caption="Proof of your sweet voice notes!">
+                    <img src="/study2.jpg" alt="Planned Date Screenshot 6" loading="lazy" data-caption="Planning our future adventures.">
+                </div>
+            </div>
+        </section>
+
+        <section class="card-messages card">
+            <h3>💖 Sweet Notes for My Love <span>💌</span></h3>
+            <div class="messages-grid" id="messagesGrid">
+                </div>
+            <div class="add-note-form">
+                <h4>Add a New Sweet Note!</h4>
+                <textarea id="newSweetNoteInput" placeholder="Write a new message for your love..."></textarea>
+                <button id="addSweetNoteBtn">Add Note</button>
+            </div>
+            <p class="add-more-note">More sweet messages coming soon... just for you!</p>
+        </section>
+
+        <section class="playlist card">
+            <h3 class="playlist-toggle" id="playlistToggle">🎧 Our Love Playlist <span>💝</span> <span class="toggle-icon">▼</span></h3>
+            <div class="playlist-content" id="playlistContent">
+                <ul>
+                    <li><span>Ek mi Ek tuuu 💖✨</span><audio controls src="/ek mi ek tu.mp3" preload="metadata"></audio></li>
+                    <li><span>Jugrafiyaa Mix 💖✨</span><audio controls src="/jugrafiya.mp3" preload="metadata"></audio></li>
+                    <li><span>Jugrafiya Male 💖✨</span><audio controls src="/jugrafiyaMale.mp3" preload="metadata"></audio></li>
+                    <li><span>Tera Fitoor 💖✨</span><audio controls src="/terafitor.mp3" preload="metadata"></audio></li>
+                    <li><span>Tuhi Meri Subh h 💖✨</span><audio controls src="/Tuhi meri subha h.mp3" preload="metadata"></audio></li>
+                    <li><span>Cahun Mei Ya Na 💖✨</span><audio controls src="/Cahunmei.mp3" preload="metadata"></audio></li>
+                    <li><span>Kaun Tujhe 🌧️💙</span><audio controls src="/kaun tuze.mp3" preload="metadata"></audio></li>
+                    <li><span>Jane Na Tu 🥺🌹</span><audio controls src="/Jane na kru.mp3" preload="metadata"></audio></li>
+                    <li><span>Sur Hi Tu 🎶💫</span><audio controls src="/sur hi tu.mp3" preload="metadata"></audio></li>
+                    <li><span>Dagabaz Re 🎵🔥</span><audio controls src="/dagabaz.mp3" preload="metadata"></audio></li>
+                    <li><span>Tola Tola 💜🎶</span><audio controls src="/tola tola.mp3" preload="metadata"></audio></li>
+                    <li><span>Tere Hawaale 💖🎵</span><audio controls src="/tere hawale.mp3" preload="metadata"></audio></li>
+                    <li><span>Tum Se Hi 💖🎵</span><audio controls src="/tum se hi.mp3" preload="metadata"></audio></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="virtual-dates card">
+            <h3>Dreaming of Our Future Dates 💭✨</h3>
+            <p class="intro-text">Even across the miles, we're planning our perfect moments together!</p>
+            <div class="date-ideas-grid" id="dateIdeasGrid">
+                </div>
+            <div class="add-idea-form">
+                <h4>Got a new dream date idea? Share it!</h4>
+                <textarea id="newDateIdeaInput" placeholder="Describe our next amazing date..." rows="3"></textarea>
+                <button id="addDateIdeaBtn">Add to Our Future Plans</button>
+            </div><br>
+            <p class="cta-text">What's your next dream date with me? Let's make it happen soon!</p>
+        </section>
+
+        
+
+        <section class="memory card">
+            <h3>❤ Our Proposal ❤ (May 31, 2025)</h3>
+            <div class="memory-text">
+                <p><strong>His message:</strong> Nikuudii.. Tu maazya jivnacha message notification aahes.👀
+                    Mi online aslo ki manat pahila vichar tujhach yeto…Tar atta ekach message sangtay…
+                    Will you be maazya lifechi forever notification? ❤📲 .... Satynarayanachya Pujek jodyane basayla ready hoshil kyy ? 🤭 unhalyatle aambe, kaju fanas , sagle padrat aanun thevtlayy 👀 ani ganpati la n chukta jodyane darshan ghyayla jauu 🥹 will you ??</p>
+                <br><hr> <br> <p><strong>Her sweet response:</strong> “From the moment we met 💖mala asa vatl ki u can be my love of my life🤌🏻 like the way u used to support me in gc😢 the way u used to observe me my little little things i remember the way u said Abhishek tila kay nako bolus pls ,for me u said uska taraf se mai sorry bolta hu usko like vo chote chote tere actions i felt for u ♥👀, my life felt forever changed—you became my missing piece, bringing light to my darkest days and turning every ordinary moment into magic. Tujhyashivay jag une vaatate, and when you smile, it feels like the world itself blossoms around me. Mi tuzya sobat jiv rangala—I feel my soul painted in your colors. Tu majha aadhaar ahes, tu majhya hrudayachi dhadadhad ahes; with you by my side, my life feels complete. Majhya man tujhyasathi dhadgat—it’s as if my heart beats only for you. Aaho, will you be my forever, my premika, my everything?”🤌🏻💖🙈”</p>
+            </div>
+        </section>
+
     </div>
 
-    <!-- Cute Collection -->
-    <div class="collection">
-      <h3>📸 Our Cutest Collection 💞</h3>
-      <p>Here we save our cutest, funniest, and most romantic moments — screenshots, chats, random selfies, and everything that makes our bond special 💌</p>
-      <ul>
-        <li>But time h yha p abhi...</li>
-      </ul>
+    <button class="secret-btn" id="secretBtn" onclick="revealSurprise()">Click For Our Secret <span>🌸</span></button>
+
+
+    <div id="popup" class="popup">
+        <div class="content">
+            <button class="close-btn" onclick="closePopup()">❌</button>
+            <img src="/ring.gif" alt="ring" class="ring">
+            <p>Will you be mine forever, my Pillu? <span>💍💞</span></p>
+        </div>
     </div>
-  </div>
 
-  <!-- Secret Button -->
-  <button class="secret-btn" onclick="revealSurprise()">Click For Our Secret 🌸</button>
+    
 
-  <!-- Popup -->
-  <div id="popup" class="popup hidden">
-    <button class="close-btn" onclick="closePopup()">❌</button>
-    <img src="/ring.gif" alt="ring" class="ring">
-    <p>Will you be mine forever, my Pillu? 💍💞</p>
-  </div>
+    <div id="imageLightbox" class="lightbox">
+        <span class="lightbox-close-btn" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+        <button class="lightbox-nav prev" onclick="navigateLightbox(-1)">&#10094;</button>
+        <button class="lightbox-nav next" onclick="navigateLightbox(1)">&#10095;</button>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
